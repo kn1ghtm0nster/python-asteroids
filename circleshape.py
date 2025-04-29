@@ -6,7 +6,7 @@ class CircleShape(pygame.sprite.Sprite):
     Base class for game objects
     """
 
-    def __init__(self, x: int, y: int, radius: int) -> None:
+    def __init__(self, x, y, radius) -> None:
         if hasattr(self, "containers"):
             super().__init__(self.containers)
         else:
