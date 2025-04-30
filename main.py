@@ -37,13 +37,13 @@ def main() -> None:
         screen.fill((0, 0, 0))
         updatable.update(dt)
 
-        # check for collisions and exit if any
         for asteroid in asteroids:
             for shot in player_shots:
                 if asteroid.check_for_collision(shot):
-                    asteroid.kill()
+                    asteroid.split()
                     shot.kill()
 
+            # check for collisions and exit if any with player
             if player.check_for_collision(asteroid):
                 print("Game over!")
                 sys.exit()
