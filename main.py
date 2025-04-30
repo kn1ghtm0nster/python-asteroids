@@ -27,7 +27,7 @@ def main() -> None:
     Shot.containers = (player_shots, updatable, drawable)
 
     player = Player(SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2)
-    asteroid_field = AsteroidField()
+    AsteroidField()
     dt = 0
 
     while True:
